@@ -30,7 +30,7 @@ use Illuminate\Support\Facades\Route;
 // Route::post('/postTest/{id}/{name}',[CustomerController::class,'index'])->name('postTest');
 
 // Route::view('/usr/register',"layouts.register");
-Route::get('/',[PostController::class,"index"]);
+Route::get('/',[PostController::class,"index"])->name('index.show');
 Route::post('/',[PostController::class,"create"])->name('create');
 Route::get('/customer/delete/{id}',[PostController::class,'delete'])->name('customer.delete');
 Route::get('/customer/edit/{id}',[PostController::class,'edit'])->name('customer.edit');
